@@ -2,17 +2,17 @@ from tkinter import * #import all from tkinter libary. allows use of Button() in
 
 window=Tk() #create window
 
-def conversion():
-    value = e1_value.get()
-    grams= float(value) * 1000 #convert e1_value to float multiply by 1.6
+def conversion(): #function used to for onClick on button command=
+    value = e1_value.get() #value from value(editText) need to use .get()
+    grams= float(value) * 1000 #convert value to float multiply
     pounds=float(value) * 2.20462
     ounces=float(value) * 35.274
     t1.insert(END,grams) #insert something in to t1 ,param's where to put text, e1_value variable wanting to insert
-    t2.insert(END,pounds)
-    t3.insert(END,ounces)
+    t2.insert(END,pounds) #insert something in to t2 ,param's where to put text, e1_value variable wanting to insert
+    t3.insert(END,ounces) #insert something in to t3 ,param's where to put text, e1_value variable wanting to insert
 
-l1=Label(window, text="Kg:")
-l1.grid(row=0,column=0)
+l1=Label(window, text="Kg:") #Label (call to window, display text "Kg:")
+l1.grid(row=0,column=0) #postions Label widget on grid
 
 e1_value=StringVar() #declare string variable to store Entry() data
 e1=Entry(window, textvariable=e1_value) #entry widget (editText)(textvariable = e1_value)
